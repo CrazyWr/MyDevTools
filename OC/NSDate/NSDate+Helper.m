@@ -305,4 +305,20 @@ static NSDateFormatter *_displayFormatter = nil;
     return [NSString stringWithFormat:@"%ld", (long)comps.year];
 }
 
+// 获取当前毫秒级时间戳
++ (NSString *)dateMicroSecond{
+    
+    NSDate * date = [NSDate date];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
+    
+    NSString * string = [NSString stringWithFormat:@"'%@'",[dateFormatter stringFromDate:date]];
+    
+    return string;
+    
+}
+
 @end

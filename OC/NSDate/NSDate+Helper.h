@@ -63,4 +63,11 @@
 
 + (NSString *)currentYear;
 
+/**
+ *  @brief 获取当前毫秒级时间戳
+ *
+ *  @return
+ */
++ (NSString *)dateMicroSecond;
+
 @end
